@@ -1,0 +1,14 @@
+ version: '3.8'
+
+ services:
+  # Service 1: Our Web App
+  web:
+    build: .                # Build using the Dockerfile in the current directory
+    ports:
+      - "5000:5000"         # Map host port 5000 to container port 5000
+    depends_on:
+      - redis               # Wait for redis to start before starting web
+
+  # Service 2: Our Database
+  redis:
+    image: "redis:alpine"   # Pull the official lightweight Redis image

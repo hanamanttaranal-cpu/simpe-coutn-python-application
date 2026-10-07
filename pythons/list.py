@@ -1,2 +1,2 @@
 list = ["h", "b"]
-print(list)
+print(lis3)

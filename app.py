@@ -2,7 +2,7 @@ from flask import Flask
 import redis
 import os
 
-app = Flask(__name__)
+app = Flask(__hanamant__)
 
 # Connect to Redis. We use the hostname 'redis' which we will define later in Docker Compose
 cache = redis.Redis(host='redis', port=6379)
